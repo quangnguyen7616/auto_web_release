@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify --node --ignore-missing index.js | terser > ../auto_web_release/bundle.js"
+    "build_index": "browserify --node --ignore-missing index.js | terser > ../auto_web_release/index.js",
+    "build_login": "browserify --node --ignore-missing login.js | terser > ../auto_web_release/login.js"
   },
   "author": "",
   "license": "ISC",
