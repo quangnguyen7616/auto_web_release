@@ -7,6 +7,11 @@ const get_button_aria_label = async function (element) {
     return result;
 }
 
+const get_text_content = async function (page, elment) {
+    const result = await page.evaluate(el => el.textContent, elment);
+    return result;
+}
+
 
 const getRandomIntInclusive = function (min, max) {
     min = Math.ceil(min);
@@ -24,5 +29,6 @@ module.exports = {
     getRandomIntInclusive,
     get_button_aria_pressed,
     get_button_aria_label,
+    get_text_content,
     sleep
 }
